@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sinda"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/sinda"
+        android:label=" "
+        android:logo="@drawable/sinda"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.sinda.MainActivity"
+            android:label="" >
+        <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.sinda.MainMenu"
+            android:label="@string/title_activity_main_menu" >
+        </activity>
+        <activity
+            android:name="com.sinda.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
+        <activity
+            android:name="com.sinda.TrainingManagement"
+            android:label="@string/title_activity_training_management" >
+        </activity>
+        <activity
+            android:name="com.sinda.Reports"
+            android:label="@string/title_activity_reports" >
+        </activity>
+        <activity
+            android:name="com.sinda.Report_Budget"
+            android:label="@string/title_activity_reports__budget" >
+        </activity>
+        <activity
+            android:name="com.sinda.Report_Attendance"
+            android:label="@string/title_activity_report__attendance" >
+        </activity>
+        <activity
+            android:name="com.sinda.Report_Cost"
+            android:label="@string/title_activity_report__cost" >
+        </activity>
+        <activity
+            android:name="com.sinda.Details"
+            android:label="@string/title_activity_details" >
+        </activity>
+        <activity
+            android:name="com.sinda.Splash"
+            android:label="@string/title_activity_splash" >
+            
+        </activity>
+        <activity
+            android:name="com.sinda.TrainingList"
+            android:label="@string/title_activity_list" >
+        </activity>
+        <activity
+            android:name="com.sinda.IDLP"
+            android:label="@string/title_activity_idlp" >
+        </activity>
+        <activity
+            android:name="com.sinda.Test"
+            android:label="@string/title_activity_test" >
+        </activity>
+        <activity
+            android:name="com.sinda.Graphical_Report"
+            android:label="@string/title_activity_graphical__report" >
+        </activity>
+        <activity
+            android:name="com.sinda.Detailed_Report"
+            android:label="@string/title_activity_detailed__report"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity android:name="com.sinda.IdlpList" >
+        </activity>
+        <activity
+            android:name="com.sinda.TrainingL"
+            android:label="@string/title_activity_training_l" >
+        </activity>
+        <activity
+            android:name="com.sinda.ILDP_Details"
+            android:label="@string/title_activity_ildp__details" >
+        </activity>
+    </application>
+
+</manifest>
