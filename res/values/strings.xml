@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Sinda</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main_menu">MainMenu</string>
+    <string name="web">www.sinda.org.sg</string>
+    <string name="title_activity_training_management">TrainingManagement</string>
+    <string name="title_activity_reports">Reports</string>
+    <string name="title_activity_reports__budget">Reports_Budget</string>
+    <string name="title_activity_report__attendance">Report_Attendance</string>
+    <string name="title_activity_report__cost">Report_Cost</string>
+    <string name="title_activity_details">Details</string>
+    <string name="title_activity_splash">Splash</string>
+    <string name="title_activity_list">List</string>
+    <string name="title_activity_idlp">IDLP</string>
+    <string name="title_activity_test">Test</string>
+    <string name="title_activity_graphical__report">Graphical_Report</string>
+    <string name="title_activity_detailed__report">Detailed_Report</string>
+    <string name="title_activity_training_l">TrainingL</string>
+    <string name="title_activity_ildp__details">ILDP_Details</string>
+
+</resources>
