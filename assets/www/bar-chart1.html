@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<link class="include" rel="stylesheet" type="text/css"
+	href="styles/jquery.jqplot.min.css" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript"
+			src="js/chartbuilder/jquery.jqplot.min.js"></script>
+		<script type="text/javascript"
+			src="js/chartbuilder/vertical_barchart.js"></script>
+		<div id="chart1" style="height: 300px; width: 500px;"></div>
+
+		<pre class="code prettyprint brush: js"></pre>
+
+		<script class="code" type="text/javascript">
+			function graph() {
+
+				var plot12 = plot();
+				plot12.x_axis_values_InArray([ 200]);
+				plot12.y_axis_value('May');
+
+				var plot2 = plot();
+				plot2.x_axis_values_InArray([ 600]);
+				plot2.y_axis_value('June');
+
+				var plot3 = plot();
+				plot3.x_axis_values_InArray([ 700]);
+				plot3.y_axis_value('July');
+
+				var plot4 = plot();
+				plot4.x_axis_values_InArray([ 1000]);
+				plot4.y_axis_value('August');
+
+				var plot5 = plot();
+				plot5.x_axis_values_InArray([ 550]);
+				plot5.y_axis_value('September');
+
+				var plots = [ plot12, plot2, plot3, plot4, plot5 ];
+				var labels = [ 'Hotel', 'Event Registration', 'Airfare' ]
+				drawbarchart_type1(labels, plots)
+			}
+			
+			
+         function getJson()
+           {
+               AndroidNativeCode.getValueJson();
+           }
+
+           function setJson(Jsonobject)
+          {
+
+               var log="";
+               for(var i =0; i<Jsonobject.length;i++)
+                 {
+                   log+= Jsonobject[i].Month +" : "+ Jsonobject[i].Budget + "<br> <br>" ;
+					plots[i]=plot[i]();
+					plots[i].x_axis_values_InArray([Jsonobject[i].Budget]);
+                	plots[i].y_axis_value(Jsonobject[i].Month);
+                
+                 }
+                 var plot12 = plot();
+				plot12.x_axis_values_InArray([ Jsonobject[0].Budget]);
+				plot12.y_axis_value(Jsonobject[0].Month);
+
+				var plot2 = plot();
+				plot2.x_axis_values_InArray([ 600]);
+				plot2.y_axis_value('June');
+
+				var plot3 = plot();
+				plot3.x_axis_values_InArray([ 700]);
+				plot3.y_axis_value('July');
+
+				var plot4 = plot();
+				plot4.x_axis_values_InArray([ 1000]);
+				plot4.y_axis_value('August');
+
+				var plot5 = plot();
+				plot5.x_axis_values_InArray([ 550]);
+				plot5.y_axis_value('September');
+
+				var plots = [ plot12, plot2, plot3, plot4, plot5 ];
+				var labels = [ 'Hotel', 'Event Registration', 'Airfare' ]
+				drawbarchart_type1(labels, plots)
+                    document.getElementById('JsonDiv').innerHTML = log;
+
+
+            }
+			
+			
+		</script>
+
+
+</head>
+
+
+<body>
+	<div class="col1" id="example-content" >
+    <Button onclick="graph()" >Display Graph</Button></div>
+    
+    <Button onclick="getJson()" >Display Data</Button>
+	
+	<div id="JsonDiv"></div></div>
+	
+    
+</body>
+
+
+</html>
